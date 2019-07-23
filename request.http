@@ -1,0 +1,33 @@
+### Create TODOs
+PUT http://localhost:5000/todo1
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="data"
+
+Todo 1 Creating things
+--WebAppBoundary--
+
+###
+PUT http://localhost:5000/todo2
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="data"
+
+Todo 2 Awesome
+--WebAppBoundary--
+
+### Get first todo
+GET http://localhost:5000/todo1
+Accept: application/json
+
+### Get second todo
+GET http://localhost:5000/todo2
+Accept: application/json
+
+### Is necesary to use three # symbols to separate each request
+GET http://localhost:5000/todo3
+Accept: application/json
+
+###
