@@ -3,5 +3,5 @@ FROM python:3.7
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["api.py"]
+EXPOSE 5000
+ENTRYPOINT ["sh", "-c", "python -m flask run"]
